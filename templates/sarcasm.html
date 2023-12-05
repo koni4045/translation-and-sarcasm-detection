@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcasm Meter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .meter-container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .meter {
+            height: 20px;
+            background-color: #f0f0f0;
+            position: relative;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .fill {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .translations-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        .translations-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .translations-table th, .translations-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .translations-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sarcasm Meter</h1>
+
+    <div class="meter-container">
+        <div class="meter">
+            <div class="fill" style="width: {{ predicted_sarcasm * 100 }}%;"></div>
+        </div>
+        <p>{{ predicted_sarcasm * 100 }}% Sarcasm</p>
+
+        <div class="translations-heading">Translations</div>
+
+        <table class="translations-table">
+            <tr>
+                <th>Language</th>
+                <th>Translation</th>
+            </tr>
+            <tr>
+                <td>French</td>
+                <td>{{ french_translated_sentence }}</td>
+            </tr>
+            <tr>
+                <td>German</td>
+                <td>{{ german_translated_sentence }}</td>
+            </tr>
+            <tr>
+                <td>Spanish</td>
+                <td>{{ spanish_translated_sentence }}</td>
+            </tr>
+        </table>
+
+        <button class="home-button" onclick="window.location.href='/'">Go to Home</button>
+    </div>
+
+</body>
+</html>
