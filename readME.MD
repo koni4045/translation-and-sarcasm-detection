@@ -1,6 +1,6 @@
+# translation-and-sarcasm-detection
 Here is a draft README.md for the sarcasm detection web app code:
 
-# Sarcasm Detection Web App
 
 This is a web app that can detect sarcasm in text and provide translations to French, German, and Spanish using Transformer models.
 
